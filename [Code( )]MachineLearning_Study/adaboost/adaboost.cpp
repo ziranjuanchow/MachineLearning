@@ -101,7 +101,7 @@ void Training(vector<sample>&a,vector<weakClassifier>&b,float*factors)
 				
 		}//拿到样本中，总的权值之和，正样本的权值和，负样本的权值和。
 		for(id=0;id<tcount;id++)
-			a[id].weight /=totalWeights;//权值归一化
+			a[id].weight /=totalWeights;	//权值归一化 
 
 /*对每一特征训练一弱分类器*/
 		//这个分类器就是用一个简单的阈值分类，现将样本进行排序，阈值的选取是在特征值上，而阈值选择的标准是错误判别的样本权重和。
